@@ -1,6 +1,6 @@
 # Real or Not? NLP with Disaster Tweets
 
-#### -- Project Status: Completed
+#### Project Status: Completed
 
 ## Project Intro/Objective
 Twitter can be a valuable mechaism for conveying important information. If the intended meaning behind a tweet can be interpreted properly,
@@ -11,6 +11,11 @@ This project is viewed as a sentiment analysis natural language processing (NLP)
 
 This work holds significance because it advances our ability to respond appropriately to situations through the vast amount of information
 available to us, especially through social media platforms, such as Twitter.
+
+This project also had contributions from three colleagues of mine: 
+* Kyle Mooney
+* Danial Osmani
+* Michael Steinberg
 
 ### Methods Used
 * Machine Learning
@@ -45,22 +50,22 @@ The following hypotheses were formed:
 * The use of n-grams will give a noticeable increase to accuracy/precision because our NLP model is so prone to miscontextualization.
 
 Steps to prove/disprove hypotheses:
-* Import dataset, extract features and target column variables
+* Import dataset, extract features and target column variables.
     * Feature columns consist of text (tweets), keywords, location, etc. Target column was a binary representation
-    of whether the tweet from the dataset had represented a disaster (1 for real disaster, 0 for fake disaster)
-    * The non-text features (keyword, location) were passed through a preprocessing pipeline, where NaN values were imputed to be a missing value variable.
-    The categorical variables were then hot encoded. 
-    * Further data cleaning occured by removing punctuation from the tweets
-    * Dataset was split into training and testing subsets 
-    * Different TfidfVectorizers were tested on the training set, using different params, including n-grams, stop-words, etc. F1 scores were used to determine
-    the best params for vocabulary construction
-    * Three different classification algorithms were tested (Multinomial Naive Bayes, Logistic Regression, and Decision Tree)
-    For consistency and to get ideal hyperparameters, GridSearchCV was used. Logistic Regression had the highest F1 Score by a slight margin.
-    * Hypothesis tests were also ran to see if any of the classifiers were significantly better than the others. 
-    Logistic Regression and MultinomialNB were not statistically signficant from each other, but DecisionTree was significantly worse.
+    of whether the tweet from the dataset had represented a disaster (1 for real disaster, 0 for fake disaster).
+* The non-text features (keyword, location) were passed through a preprocessing pipeline, where NaN values were imputed to be a missing value variable.
+The categorical variables were then hot encoded. 
+* Further data cleaning occured by removing punctuation from the tweets.
+* Dataset was split into training and testing subsets.
+* Different TfidfVectorizers were tested on the training set, using different parameters, including n-grams, stop-words, etc. F1 scores were 
+used to determine the best parameters for vocabulary construction.
+* Three different classification algorithms were tested (Multinomial Naive Bayes, Logistic Regression, and Decision Tree) using the vocabulary.
+For consistency and to get ideal hyperparameters, GridSearchCV was used. Logistic Regression had the highest F1 Score by a slight margin.
+* Hypothesis tests were also ran to see if any of the classifiers were significantly better than the others. 
+Logistic Regression and MultinomialNB were not statistically signficant from each other, but DecisionTree was significantly worse than the other two.
 
 ## Getting Started
 
 1. Clone this repo (for help see this (https://help.github.com/articles/cloning-a-repository/)).
-2. Make sure Jupyter Notebook and raw data files are kept in the same directory
+2. Make sure both Jupyter Notebook and raw data files are kept in the same directory
 5. Follow the notebook, which contains code, annotations, in-depth descriptions, etc
