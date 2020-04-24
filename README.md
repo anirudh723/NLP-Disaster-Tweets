@@ -3,7 +3,7 @@
 #### Project Status: Completed
 
 ## Project Intro/Objective
-Twitter can be a valuable mechaism for conveying important information. If the intended meaning behind a tweet can be interpreted properly,
+Twitter can be a valuable mechanism for conveying important information. If the intended meaning behind a tweet can be interpreted properly,
 it can saves lives in time of a disaster. 
 The purpose of this project is to use supervised machine learning techniques in order to predict the disaster status of a given tweet,
 based on a training subset of a collection of twitter data. 
